@@ -12,7 +12,7 @@ System.config({
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.10.0",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.0",
     "aurelia-framework": "github:aurelia/framework@0.9.0",
-    "aurelia-http-client": "github:aurelia/http-client@0.6.0",
+    "aurelia-http-client": "github:aurelia/http-client@0.6.1",
     "aurelia-router": "github:aurelia/router@0.6.0",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
     "font-awesome": "npm:font-awesome@4.3.0",
@@ -54,6 +54,10 @@ System.config({
       "core-js": "npm:core-js@0.4.10"
     },
     "github:aurelia/http-client@0.6.0": {
+      "aurelia-path": "github:aurelia/path@0.4.6",
+      "core-js": "npm:core-js@0.4.10"
+    },
+    "github:aurelia/http-client@0.6.1": {
       "aurelia-path": "github:aurelia/path@0.4.6",
       "core-js": "npm:core-js@0.4.10"
     },
@@ -220,6 +224,7 @@ System.config({
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "stream": "npm:stream-browserify@1.0.0",
+      "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -249,3 +254,4 @@ System.config({
     }
   }
 });
+
