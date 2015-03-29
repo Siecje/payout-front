@@ -7,18 +7,17 @@ export class API {
     this.http.configure(x => {
       x.withBaseUri('http://localhost:8000/api/');
       x.withHeader('Authorization', 'Basic ' + btoa('cody:cody'));
-      //x.withHeader('Content-Type', 'application/json');
-      // x.withResponseType('application/json');
+      x.withHeader('Content-Type', 'application/json');
+      x.withHeader('Accept', 'application/json');
     });
   }
 
   getAllProjects(){
-    // TODO: default should be JSON
-    return this.http.get('projects?format=json');
+    return this.http.get('projects');
   }
 
   getProject(id){
-    return this.http.get(`projects/${id}?format=json`);
+    return this.http.get(`projects/${id}`);
   }
 
   saveProject(project){
@@ -26,6 +25,8 @@ export class API {
       return this.http.put('projects/' + project.id, project);
     }
     else{
+      // TODO: use current user or use authenticated user of request
+      project.creator = 1;
       return this.http.post('projects', project);
     }
   }
