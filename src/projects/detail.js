@@ -1,4 +1,4 @@
-import {API} from './api';
+import {API} from '../api';
 
 export class Project{
   static inject() { return [API]; }
