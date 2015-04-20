@@ -41,11 +41,7 @@ export class API {
     if(project.id){
       return this.http.put('projects/' + project.id, project);
     }
-    else{
-      // TODO: use current user or use authenticated user of request
-      project.creator = 1;
-      return this.http.post('projects', project);
-    }
+    return this.http.post('projects', project);
   }
 
   getIssue(id){
